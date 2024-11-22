@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{B8E18E11-5564-42DD-A8C9-7639C7C14BC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WASM", "WASM\WASM.csproj", "{F982235D-9225-414D-8B30-38E1BDBB539D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8E18E11-5564-42DD-A8C9-7639C7C14BC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8E18E11-5564-42DD-A8C9-7639C7C14BC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8E18E11-5564-42DD-A8C9-7639C7C14BC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8E18E11-5564-42DD-A8C9-7639C7C14BC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F982235D-9225-414D-8B30-38E1BDBB539D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F982235D-9225-414D-8B30-38E1BDBB539D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F982235D-9225-414D-8B30-38E1BDBB539D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F982235D-9225-414D-8B30-38E1BDBB539D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA551269-C70F-4FD1-8C46-1AC29755599C}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,37 @@
+﻿@page "/uploadroot"
+@inject HttpClient http
+<h3>UpploadRoot</h3>
+<InputFile OnChange="OnFileChanged"></InputFile>
+<button @onclick="UploadFile">Upload</button>
+<p>@status</p>
+@code {
+    private IBrowserFile file;
+    private string status = "";
+    private async Task OnFileChanged(InputFileChangeEventArgs e)
+    {
+        file = e.File; /// mỗi khhi file đc chon thhay đổi thì mình sẽ gán lại
+    }
+    private async  Task UploadFile()
+    {
+        if(file==null)
+        {
+            status = " No file selected";
+        }
+        using var content = new MultipartFormDataContent();
+        using var fileContent = new StreamContent(file.OpenReadStream());
+        fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(file.ContentType);
+        content.Add(fileContent, "file", file.Name);
+        var reponse = await http.PostAsync("api/file/uploadroot", content);
+        if(reponse.IsSuccessStatusCode)
+        {
+            status = "upload succeessfuly";
+        }
+        else
+        {
+            status = await reponse.Content.ReadAsStringAsync();
+        }
+    }
+    
+
+
+}
